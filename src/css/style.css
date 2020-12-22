@@ -28,16 +28,29 @@ img {
 }
 
 .titel {
+  margin-left: auto;
+  margin-right: auto;
   font-family: "Galindo", cursive;
-  font-size: 60px;
+  font-size: 27px;
   text-transform: capitalize;
   text-shadow: 5px 5px 5px #3b127e;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .titel {
+    font-size: 52px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .titel {
+    font-size: 80px;
+  }
+}
 
 .timer {
-  display: flex;
-  justify-content: center;
+  max-width: 1400px;
+  min-width: 320px;
+
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -45,30 +58,69 @@ img {
   border-radius: 2px;
 }
 
-.field {
-  margin-top: 50px;
-  margin-bottom: 25px;
-  margin-right: 85px;
+@media screen and (min-width: 768px) {
+  .timer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 
+@media screen and (min-width: 1024px) {
+  .timer {
+    display: flex;
+    justify-content: center;
+  }
+}
+.field {
   color: #242129;
   font-family: "Galindo", cursive;
-  font-size: 100px;
+  margin-top: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  .field {
+    flex-basis: calc(100% / 2);
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .field {
+    flex-basis: calc(100% / 4);
+    font-size: 52px;
+  }
+}
 .value {
   font-family: "Galindo", cursive;
-  font-size: 80px;
-}
-
-.label {
-  display: flex;
-
-  font-family: "Galindo", cursive;
-  color: #9ea5e9;
-  text-shadow: 5px 5px 5px #3b127e;
   font-size: 50px;
 }
 
+@media screen and (min-width: 1024px) {
+  .value {
+    font-size: 82px;
+  }
+}
+.label {
+  display: flex;
+  justify-content: center;
+  font-family: "Galindo", cursive;
+  color: #9ea5e9;
+  text-shadow: 5px 5px 5px #3b127e;
+  font-size: 40px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .label {
+    font-size: 70px;
+  }
+}
+/* media screen and (min-width: 1024px) {
+  .label {
+    font-size: 42px;
+  }
+} */
 .alert {
   position: fixed;
   bottom: 50px;
